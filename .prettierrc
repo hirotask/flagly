@@ -1,0 +1,10 @@
+{
+  "semi": true,              // サーバーサイドでは明確な文の終了を重視
+  "trailingComma": "all",    // Node.jsは新しいためES2017+の末尾カンマを活用
+  "singleQuote": true,       // 文字列の統一性を保つ
+  "printWidth": 120,         // サーバーサイドでは長い行も許可
+  "tabWidth": 2,             // 標準的なインデント
+  "useTabs": false,          // スペースで統一
+  "endOfLine": "lf"          // Unix系サーバーの標準改行コード
+}
+
