@@ -51,5 +51,6 @@
     "prettier": "^3.8.2",
     "tsdown": "^0.21.8",
     "typescript": "^6.0.2"
-  }
+  },
+  "packageManager": "pnpm@10.0.0"
 }
