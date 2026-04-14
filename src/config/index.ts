@@ -1,5 +1,5 @@
 import path from "node:path";
-import type { FlagSource } from "./types"
+import type { FlagSource } from "../types"
 import { existsSync } from "node:fs";
 import { pathToFileURL } from "node:url";
 

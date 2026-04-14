@@ -1,4 +1,4 @@
-import { getConfig } from "./config-store";
+import { getConfig } from "./config/store";
 
 
 export type MethodBooleanFlag = (param: {

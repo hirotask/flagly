@@ -1,5 +1,5 @@
 import { loadConfig } from "./config";
-import { setConfig } from "./config-store";
+import { setConfig } from "./config/store";
 
 (() => {
   loadConfig().then((config) => {

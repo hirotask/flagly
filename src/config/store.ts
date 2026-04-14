@@ -1,4 +1,4 @@
-import { Config } from "./config";
+import { Config } from ".";
 
 let configRef: Config | null = null;
 
