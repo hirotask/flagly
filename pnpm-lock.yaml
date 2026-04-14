@@ -8,6 +8,15 @@ importers:
 
   .:
     devDependencies:
+      prettier:
+        specifier: ^3.8.2
+        version: 3.8.2
+      typescript:
+        specifier: ^6.0.2
+        version: 6.0.2
+
+  packages/flagly:
+    devDependencies:
       '@types/node':
         specifier: ^25.6.0
         version: 25.6.0
@@ -20,9 +29,31 @@ importers:
       eslint:
         specifier: ^10.2.0
         version: 10.2.0
-      prettier:
-        specifier: ^3.8.2
-        version: 3.8.2
+      tsdown:
+        specifier: ^0.21.8
+        version: 0.21.8(typescript@6.0.2)
+      typescript:
+        specifier: ^6.0.2
+        version: 6.0.2
+
+  packages/flagly-config:
+    dependencies:
+      flagly:
+        specifier: workspace:*
+        version: link:../flagly
+    devDependencies:
+      '@types/node':
+        specifier: ^25.6.0
+        version: 25.6.0
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.58.2
+        version: 8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2)
+      '@typescript-eslint/parser':
+        specifier: ^8.58.2
+        version: 8.58.2(eslint@10.2.0)(typescript@6.0.2)
+      eslint:
+        specifier: ^10.2.0
+        version: 10.2.0
       tsdown:
         specifier: ^0.21.8
         version: 0.21.8(typescript@6.0.2)

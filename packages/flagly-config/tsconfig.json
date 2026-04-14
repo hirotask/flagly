@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "declaration": true,
+    "types": [ "node" ],
+    "exactOptionalPropertyTypes": true,
+    "experimentalDecorators": true,
+    "isolatedDeclarations": true,
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2020",
+  },
+  "include": ["src"]
+}
+
