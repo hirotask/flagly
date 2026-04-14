@@ -1,4 +1,4 @@
-import { getConfig } from "./config/store";
+import { getConfig } from "./config/store.ts";
 
 export type WithBooleanFlag = (param:{
   key: string,

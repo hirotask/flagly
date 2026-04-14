@@ -8,3 +8,12 @@ import { setConfig } from "./config/store";
     console.error(err);
   })
 })
+
+export * from "./config";
+export * from "./decorator";
+export * from "./flag.ts";
+export type {
+  BooleanFlagSource,
+  AsyncBooleanFlagSource,
+  FlagSource,
+} from "./types";
