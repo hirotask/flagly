@@ -1,14 +1,13 @@
 import { loadConfig } from "./config";
 import { setConfig } from "./config/store";
 
-(() => {
-  loadConfig().then((config) => {
-    setConfig(config);
-  }).catch((err) => {
-    console.error(err);
-  })
-})
+loadConfig().then((config) => {
+  setConfig(config);
+}).catch((err) => {
+  console.error(err);
+});
 
+// Exports
 export * from "./config";
 export * from "./decorator";
 export * from "./flag.ts";
