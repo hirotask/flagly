@@ -1,4 +1,4 @@
-import { booleanFlag } from '@flagly/node';
+import { booleanFlag, withBooleanFlag } from '@flagly/node';
 
 class FeatureA {
   @booleanFlag({
@@ -12,3 +12,12 @@ class FeatureA {
 
 const instance = new FeatureA();
 instance.invoke();
+
+const invokeFeatureB = withBooleanFlag({
+  key: 'feature-B',
+  defaultValue: false,
+})(() => {
+  console.log('This is feature B');
+});
+
+invokeFeatureB();
