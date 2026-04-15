@@ -15,11 +15,8 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2
 
-  packages/flagly:
+  packages/core:
     devDependencies:
-      '@types/node':
-        specifier: ^25.6.0
-        version: 25.6.0
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.58.2
         version: 8.58.2(@typescript-eslint/parser@8.58.2(eslint@10.2.0)(typescript@6.0.2))(eslint@10.2.0)(typescript@6.0.2)
@@ -36,11 +33,11 @@ importers:
         specifier: ^6.0.2
         version: 6.0.2
 
-  packages/flagly-config:
+  packages/node:
     dependencies:
-      flagly:
+      '@flagly/core':
         specifier: workspace:*
-        version: link:../flagly
+        version: link:../core
     devDependencies:
       '@types/node':
         specifier: ^25.6.0
