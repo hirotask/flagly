@@ -1,10 +1,13 @@
 import { Config } from '@flagly/core';
 import { existsSync } from 'node:fs';
+import { createRequire } from 'node:module';
 import path from 'node:path';
 
 export function defineConfig(config: Config): Config {
   return config;
 }
+
+const _require = createRequire(import.meta.url);
 
 const configNames = ['flagly.config.js', 'flagly.config.cjs'];
 
@@ -21,25 +24,19 @@ function isConfig(value: unknown): value is Config {
     return false;
   }
 
-  if ('baseEnv' in value && value.baseEnv !== undefined && !isObject(value.baseEnv)) {
-    return false;
-  }
-
   return true;
 }
 
 export function loadConfigSync(): Config {
-  let configFilePath: string | undefined = configNames.find((fileName) => {
-    const resolvedPath = path.resolve(process.cwd(), fileName);
-
-    return existsSync(resolvedPath);
-  });
+  const configFilePath = configNames
+    .map((fileName) => path.resolve(process.cwd(), fileName))
+    .find((resolvedPath) => existsSync(resolvedPath));
 
   if (configFilePath == null) {
     throw new Error(`[flagly-node] Config file was not found.`);
   }
 
-  const loaded: unknown = require(configFilePath);
+  const loaded: unknown = _require(configFilePath);
 
   if (!isConfig(loaded)) {
     throw new Error(`[flagly-node] Invalid config file: ${configFilePath}`);
