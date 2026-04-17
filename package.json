@@ -11,9 +11,13 @@
     "lint": "pnpm -r run lint",
     "format": "pnpm -r run format",
     "format:check": "pnpm -r run format:check",
-    "build": "pnpm -r run build"
+    "build": "pnpm -r run build",
+    "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
+    "husky": "^9.1.7",
     "prettier": "^3.8.2",
     "typescript": "^6.0.2"
   },
