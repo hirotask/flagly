@@ -1,3 +1,14 @@
 packages:
 - "packages/*"
 - "example"
+
+catalog:
+  "@commitlint/cli": "^20.5.0"
+  "@commitlint/config-conventional": "^20.5.0"
+  "husky": "^9.1.7"
+  "prettier": "^3.8.2"
+  "typescript": "^6.0.2"
+
+catalogMode: strict
+shellEmulator: true
+trustPolicy: no-downgrade
