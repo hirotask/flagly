@@ -44,10 +44,7 @@
     "build": "tsdown"
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^8.58.2",
-    "@typescript-eslint/parser": "^8.58.2",
-    "eslint": "^10.2.0",
-    "tsdown": "^0.21.8",
-    "typescript": "^6.0.2"
+    "tsdown": "catalog:",
+    "typescript": "catalog:"
   }
 }

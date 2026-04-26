@@ -1,3 +1,21 @@
 packages:
-- "packages/*"
-- "example"
+  - packages/*
+  - example
+
+catalog:
+  '@commitlint/cli': ^20.5.0
+  '@commitlint/config-conventional': ^20.5.0
+  '@eslint/js': ^10.0.1
+  eslint: ^10.2.0
+  eslint-config-prettier: ^10.1.8
+  husky: ^9.1.7
+  prettier: ^3.8.2
+  tsdown: ^0.21.8
+  typescript: ^6.0.2
+  typescript-eslint: ^8.59.0
+
+catalogMode: strict
+
+shellEmulator: true
+
+trustPolicy: no-downgrade

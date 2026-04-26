@@ -2,6 +2,7 @@
   "version": "0.0.1",
   "description": "",
   "license": "MIT",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/hirotask/flagly"
@@ -15,11 +16,15 @@
     "prepare": "husky"
   },
   "devDependencies": {
-    "@commitlint/cli": "^20.5.0",
-    "@commitlint/config-conventional": "^20.5.0",
-    "husky": "^9.1.7",
-    "prettier": "^3.8.2",
-    "typescript": "^6.0.2"
+    "@commitlint/cli": "catalog:",
+    "@commitlint/config-conventional": "catalog:",
+    "@eslint/js": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "husky": "catalog:",
+    "prettier": "catalog:",
+    "typescript": "catalog:",
+    "typescript-eslint": "catalog:"
   },
-  "packageManager": "pnpm@10.0.0"
+  "packageManager": "pnpm@10.30.0"
 }
