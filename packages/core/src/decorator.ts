@@ -2,7 +2,7 @@ import { BooleanFlagDefinition, BooleanFlagSource, Config, FlagEnv } from './typ
 
 export type BooleanFlagFunc = (
   definition: BooleanFlagDefinition,
-) => (_target: Object, _propertyKey: string, descripter: PropertyDescriptor) => void;
+) => (_target: object, _propertyKey: string, descripter: PropertyDescriptor) => void;
 
 export function createBooleanFlag(config: Config) {
   const flagSource: BooleanFlagSource = config.flagSource ?? ((_, defaultValue) => defaultValue);
@@ -10,7 +10,7 @@ export function createBooleanFlag(config: Config) {
   const baseEnv = config.baseEnv ?? {};
 
   return (definition: BooleanFlagDefinition) =>
-    (_target: Object, _propertyKey: string, descripter: PropertyDescriptor): void => {
+    (_target: object, _propertyKey: string, descripter: PropertyDescriptor): void => {
       const mergedEnv: FlagEnv = {
         ...baseEnv,
         ...(definition.env ?? {}),
