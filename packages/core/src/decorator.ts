@@ -21,7 +21,7 @@ export function createBooleanFlag(config: Config) {
       const origin = descripter.value;
 
       descripter.value = function (...args: unknown[]) {
-        if (flag) origin.apply(this, args);
+        if (flag) return origin.apply(this, args);
       };
     };
 }
