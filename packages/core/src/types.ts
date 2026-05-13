@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AnyFunc = (...args: any[]) => any;
 
 export type FlagEnv = Record<string, unknown>;
