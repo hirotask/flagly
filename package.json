@@ -3,6 +3,7 @@
   "description": "",
   "license": "MIT",
   "type": "module",
+  "private": "true",
   "repository": {
     "type": "git",
     "url": "https://github.com/hirotask/flagly"
